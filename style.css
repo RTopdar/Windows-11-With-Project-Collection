@@ -7,9 +7,9 @@
     color: var(--textColor);
 }
 :root{
-    --task-height: 5vh;
+    --task-height: 4.5vh;
     --popup-height: 82vh;
-    --popup-width: 45%;
+    --popup-width: 34%;
     --textColor: #cdd0d4;
     --backColor: rgba(38,38,38,0.56);
     --hovColor: rgba(101,101, 101,0.233);
@@ -19,6 +19,7 @@ body
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    background: url(./assets/wallpapers/Windows\ 11\ Wallpaper\ 2.jpg) center top/cover;
 }
 .taskbar{
     position: relative;
@@ -43,7 +44,7 @@ body
     justify-content: center;
 }
 .actual-taskbar .center-tb img{
-    height: 44px;
+    height: 50px;
     margin: 0px 10px;
     padding: 8px;
     cursor: pointer;
@@ -88,7 +89,7 @@ body
 }
 .popup{
     position: absolute;
-    top: 80%;
+    top: 100%;
     left: 0%;
     height: 100%;
     width: 100%;
@@ -114,7 +115,7 @@ body
 }
 .popActive{
     position: absolute;
-    top: -3%;
+    top: 3%;
     left: 0%;
 }
 .search-box{
@@ -158,25 +159,27 @@ body
     background-color: var(--hovColor);
 }
 .pinned{
-    cursor: default !important;
+    cursor: default;
 }
 .recApps{
+    display: grid;
     grid-column: 2/3;
     grid-row: 4/5;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr 1fr !important;
 }
 .appImg{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
+    
     padding: 3px 10px;
 }
 .appImg p{
     font-size: 13px;
 }
-.appImg >img{
-    width: 50%;
+.appImg > img{
+    width: 50px;
     
     padding: 10px;
 } 
@@ -201,4 +204,111 @@ body
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+}
+.recAppName::first-letter{
+    text-transform: uppercase;
+}
+.recOpenedName{
+    padding-left: 20px ;
+}
+.openDate{
+    font-size: 11px;
+    color: #bababa;
+}
+.recOpened{
+    display: flex ;
+    align-items: center ;
+    padding: 10px;
+}
+.fileName, .myName{
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+.recOpened img{
+    width: 36px;
+}
+.date{
+    display: flex ;
+    flex-direction: column;
+    text-align: right ;
+    cursor: default;
+    font-size: 14px;
+}
+.date p{
+    padding: 3px;
+}
+.hover:hover{
+    background-color: var(--backColor);
+    border-radius: 4px;
+    cursor: pointer ;
+}
+.user{
+    grid-column: 1/4;
+    grid-row: 7/8;
+    background-color: rgba(21,21,21,0.493);
+}
+.profile{
+    display: flex;
+    grid-column: 2 / 3;
+    grid-row: 7 / 8;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.username{
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    width: 17%;
+}
+.userImg img{
+    border-radius: 50%;
+    width: 40px;
+}
+.power img{
+    filter: invert(100%);
+    width: 20px;
+    /* isolation: isolate; */
+
+}
+.userImg img:hover{
+    box-shadow: 1px 1px 10px rgba(21, 21, 21, 0.493);
+    cursor: pointer;
+}
+.power{
+    position: relative;
+    /* border: 2px solid white; */
+}
+.power-menu{
+    position: absolute;
+    /* good luck positioning this one */
+    top: 500%;
+    left: -10%;
+    height: 110px;
+    width: 86px;
+    background-color: var(--backColor);
+    padding: 5px;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+
+}
+.power-menu-vis{
+    position: absolute;
+    top: -555%;
+    left: -10%;
+}
+.power-menu p{
+    font-size: 13px;
+    cursor: default;
+    line-height: 2rem;
+}
+
+.nada{
+    padding: 1px 6px;
+}
+
+.nada:hover{
+    background-color: rgba(79, 79, 79, 0.733);
+    border-radius: 4px;
+    cursor: pointer;
 }
