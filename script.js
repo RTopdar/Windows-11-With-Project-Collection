@@ -54,7 +54,7 @@ let notApps = document.querySelectorAll('.easyDoesIt');
 notApps.forEach(function(el){
     el.addEventListener('click', function () {
         
-        myNewShit.innerHTML = myShit;
+        desktop.innerHTML = html;
     
         body.appendChild(myNewShit);
     
