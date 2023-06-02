@@ -107,16 +107,7 @@ nada.forEach(function(el){
     })
 })
 
-const date = new Date();
-const day = date.getDate();
-const month = date.getMonth();
-const year = date.getFullYear();
-const taskDate = document.querySelector(`#taskDate`);
-const hour = date.getHours();
-const minute = date.getMinutes();
-taskDate.innerHTML = `${day}/${month + 1}/${year}`;
-const taskTime = document.querySelector(`#taskTime`);
-taskTime.innerHTML = `${hour} : ${minute}`;
+
 
 const setDate = function () {
     const date = new Date();
