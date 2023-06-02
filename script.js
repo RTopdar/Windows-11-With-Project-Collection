@@ -56,10 +56,10 @@ notApps.forEach(function(el){
         
         desktop.innerHTML = html;
     
-        body.appendChild(myNewShit);
+        body.appendChild(desktop);
     
         setTimeout(() => {
-            myNewShit.innerHTML = "";
+            desktop.innerHTML = "";
         }, 2000);
     })
 })
