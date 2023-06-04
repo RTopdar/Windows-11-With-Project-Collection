@@ -9,7 +9,11 @@ But this is an advanced version that has clickable icons on the start menu and t
 
 I got to learn about the project from CodeMite and made the project using a lot of his own code, but I made some improvements of my own.
 
-1: The initial code of CodeMite had the date and time hardcoded
+1. The initial code of CodeMite had the date and time hardcoded. I added some JavaScript functions to make sure that the time shown in the taskbar is accurate and gets updated in realtime.
+
+2. I made the search function in the start menu case-insensitive so that searching becomes easier
+
+This project was only possible since those two videos were available and both CodeWithHarry and CodeMite made me understand those concepts a lot.
 
 
 
@@ -35,7 +39,7 @@ Responsive Icons
 
 ## Demo
 
-Insert gif or link to demo
+![Video Demo](https://github.com/RTopdar/Windows-11-With-Project-Collection/blob/909170b0860cbf840013a5e21fcb6fb63cf5562d/assets/windows%20demo.gif)
 
 
 ## Authors
