@@ -115,7 +115,7 @@ const setDate = function () {
     const month = date.getMonth();
     const year = date.getFullYear();
     const taskDate = document.querySelector(`#taskDate`);
-    taskDate.innerHTML = `${day}/${month + 1}/${year}`;
+    taskDate.innerHTML = `${day}/${(month+1).toLocaleString(`en-US`,{minimumIntegerDigits:2})}/${year}`;
 }
 
 const setTime = function(){
@@ -124,7 +124,7 @@ const setTime = function(){
     const minute = date.getMinutes();
     const seconds = date.getSeconds();
     const taskTime = document.querySelector(`#taskTime`);
-    taskTime.innerHTML = `${hour} : ${minute} : ${seconds}`;
+    taskTime.innerHTML = `${hour.toLocaleString(`en-US`,{minimumIntegerDigits:2})} : ${(minute).toLocaleString(`en-US`,{minimumIntegerDigits:2})} : ${seconds.toLocaleString(`en-US`,{minimumIntegerDigits:2})}`; //to make the format look better
 }
 const refresh = 1000;  //this will fetch the time every one second
 setInterval(setDate, refresh);
