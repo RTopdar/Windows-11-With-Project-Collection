@@ -112,7 +112,7 @@ nada.forEach(function(el){
 const setDate = function () {
     const date = new Date();
     const day = date.getDate();
-    const month = date.getMonth();
+    const month = date.getMonth()
     const year = date.getFullYear();
     const taskDate = document.querySelector(`#taskDate`);
     taskDate.innerHTML = `${day}/${(month+1).toLocaleString(`en-US`,{minimumIntegerDigits:2})}/${year}`;
@@ -121,10 +121,10 @@ const setDate = function () {
 const setTime = function(){
     const date = new Date();
     const hour = date.getHours();
-    const minute = date.getMinutes();
+    const minute = date.getMinutes().toLocaleString(`en-US`,{minimumIntegerDigits:2});
     const seconds = date.getSeconds();
     const taskTime = document.querySelector(`#taskTime`);
-    taskTime.innerHTML = `${hour.toLocaleString(`en-US`,{minimumIntegerDigits:2})} : ${(minute).toLocaleString(`en-US`,{minimumIntegerDigits:2})} : ${seconds.toLocaleString(`en-US`,{minimumIntegerDigits:2})}`; //to make the format look better
+    taskTime.innerHTML = `${hour} : ${minute} : ${seconds}`;
 }
 const refresh = 1000;  //this will fetch the time every one second
 setInterval(setDate, refresh);
