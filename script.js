@@ -73,7 +73,7 @@ let nada = document.querySelectorAll('.nada');
 nada.forEach(function(el){
     el.addEventListener('click', function () {
         
-        myNewShit.innerHTML = `<div class="desktop" style="position: absolute;
+        desktop.innerHTML = `<div class="desktop" style="position: absolute;
         z-index: 417047847385;
         left: 0%;
         top: 0%;
@@ -94,15 +94,15 @@ nada.forEach(function(el){
         align-items: center;
         border-radius: 12px;
         color: var(--textColor);">
-            <p>Ab yeh to kisi kitab me nhi likha!</p>
+            <p>Can't exactly do that</p>
         </div>
         </div>
                 `;
     
-        body.appendChild(myNewShit);
+        body.appendChild(desktop);
     
         setTimeout(() => {
-            myNewShit.innerHTML = "";
+            desktop.innerHTML = "";
         }, 1500);
     })
 })
