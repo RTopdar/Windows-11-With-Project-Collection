@@ -17,7 +17,7 @@
 body
 {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     background: url(./assets/wallpapers/Windows\ 11\ Wallpaper\ 2.jpg) center top/cover;
 }
@@ -313,3 +313,15 @@ body
     cursor: pointer;
 }
 
+
+.codewars-popup{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    top: 120%;
+    right: -40%;  
+}
+.codeActive{
+    top: 90%;
+}

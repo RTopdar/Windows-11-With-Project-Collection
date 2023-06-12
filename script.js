@@ -129,3 +129,18 @@ const setTime = function(){
 const refresh = 1000;  //this will fetch the time every one second
 setInterval(setDate, refresh);
 setInterval(setTime, refresh);
+
+const search_bar = document.getElementById('search-bar');
+
+search_bar.addEventListener('click',()=>{
+    document.querySelector('#search-bar').classList.toggle("hovActive");
+    // document.querySelector('.codewars-popup').classList.toggle("codeActive");
+    document.querySelector('.popup').classList.toggle("popActive");
+    // document.querySelector('.clicked').classList.toggle("hovActive");
+})
+
+const codewars = document.querySelector(`#codewars`);
+codewars.addEventListener('click',()=>{
+    document.querySelector('.codewars-popup').classList.toggle("codeActive");
+    codewars.classList.toggle("hovActive");
+})
